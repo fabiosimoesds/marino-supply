@@ -43,20 +43,28 @@ serve
 npm run build
 ```
 
-2. Commit all files including the `dist` folder:
+2. Make sure your HTML files are linking to the correct CSS path:
+```html
+<!-- Update your CSS path to be relative to the repository root -->
+<link href="/marino-supply-website/dist/output.css" rel="stylesheet">
+```
+
+3. Commit all files including the `dist` folder:
 ```bash
 git add .
-git commit -m "Your commit message"
+git commit -m "Build CSS for production"
 git push
 ```
 
-3. Enable GitHub Pages in your repository settings:
+4. Enable GitHub Pages in your repository settings:
 - Go to Settings > Pages
 - Select "Deploy from a branch"
 - Choose "main" branch and "/ (root)"
 - Click Save
 
-Your site will be available at: `https://fabiosimoesds.github.io/marino-supply`
+Your site will be available at: `https://fabiosimoesds.github.io/marino-supply-website`
+
+**Note**: Make sure the `dist` folder is not in your `.gitignore` file, as GitHub Pages needs the built CSS file.
 
 ## Technologies Used
 - HTML5
